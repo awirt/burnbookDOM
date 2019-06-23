@@ -16,13 +16,13 @@ function appendText(event) {
     `)
   
   $(".userInputText").val("")
-  
-  var deleteButton = $("button");
-  deleteButton.on("click", deleteText);
 
-  function deleteText(event) {
-    event.preventDefault();
-    event.target.parentNode.remove();
-    }
+  deleteText();
 }
 
+function deleteText(event) {
+    event.preventDefault();
+    var deleteButton = $("button");
+    deleteButton.on("click", deleteText);
+    event.target.parentNode.remove();
+    }
