@@ -8,14 +8,16 @@ function appendText(event) {
   
   var text = $(".userInputText").val();
   
-  container.append(`
+  var messageToAppend = `
     <section class="messageContainer">
       <p>${text}.</p>
       <button>Delete</button>
     </section>
-    `)
+    `;
   
-  $(".userInputText").val("")
+  container.append(messageToAppend);
+  
+  $(".userInputText").val("");
   
   var deleteButton = $("button");
   deleteButton.on("click", deleteText);
