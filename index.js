@@ -39,5 +39,13 @@ function deleteAllMessages(event) {
   console.log(container);
 }
 
-var allStoredMessages = localStorage.getItem("messages");
-container.html(allStoredMessages);
+function refresh() {
+  var allStoredMessages = localStorage.getItem("messages");
+  if (allStoredMessages !== null){
+    container.html(allStoredMessages);
+  } else {
+    container.html("");
+  };
+}
+
+refresh();
