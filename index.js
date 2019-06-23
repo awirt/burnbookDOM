@@ -15,7 +15,7 @@ function appendText(event) {
     `;
   
   container.append(messageToAppend);
-  localStorage.setItem("messages"; messageToAppend);
+  localStorage.setItem("messages", messageToAppend);
   
   $(".userInputText").val("");
   
