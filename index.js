@@ -3,7 +3,7 @@ var submitButton = $(".submitButton");
 var deleteAllButton = $(".deleteAllButton");
 
 submitButton.on("click", appendText);
-deleteAllBUtton.on("click", deleteAllMessages);
+deleteAllButton.on("click", deleteAllMessages);
 
 function appendText(event) {
   event.preventDefault();
