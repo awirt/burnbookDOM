@@ -15,7 +15,7 @@ function appendText(event) {
     `;
   var localMessage = localStorage.getItem("messages");
    
-  container.append(messageToAppend);
+  container.prepend(messageToAppend);
   
   localMessage = messageToAppend + localMessage
   localStorage.setItem("messages", localMessage);
