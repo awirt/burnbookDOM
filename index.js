@@ -14,11 +14,11 @@ function appendText(event) {
     </section>
     `;
   var localMessage = localStorage.getItem("messages");
-  
-  messageToAppend = messageToAppend + localMessage
-  
+   
   container.append(messageToAppend);
-  localStorage.setItem("messages", messageToAppend);
+  
+  localMessage = messageToAppend + localMessage
+  localStorage.setItem("messages", localMessage);
   
   $(".userInputText").val("");
   
