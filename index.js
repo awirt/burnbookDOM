@@ -10,7 +10,7 @@ function appendText(event) {
   
   var messageToAppend = `
     <section class="messageContainer">
-      <p>${text}.</p>
+      <p>${text}</p>
       <button>Delete</button>
     </section>
     `;
