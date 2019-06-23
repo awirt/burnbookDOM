@@ -30,3 +30,6 @@ function deleteText(event) {
     event.preventDefault();
     event.target.parentNode.remove();
     }
+
+var allStoredMessages = localStorage.getItem("messages");
+container.html(allStoredMessages);
