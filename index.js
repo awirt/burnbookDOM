@@ -5,7 +5,6 @@ submitButton.on("click", appendText);
 
 function appendText(event) {
   event.preventDefault();
-  
   var text = $(".userInputText").val();
   
   var messageToAppend = `
@@ -16,6 +15,7 @@ function appendText(event) {
     `;
   
   container.append(messageToAppend);
+  localStorage.setItem("messages"; messageToAppend);
   
   $(".userInputText").val("");
   
