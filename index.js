@@ -5,14 +5,17 @@ submitButton.on("click", appendText);
 
 function appendText(event) {
   event.preventDefault();
-  var text = $(".userInputText").val();
   
+  var text = $(".userInputText").val();
   var messageToAppend = `
     <section class="messageContainer">
       <p>${text}</p>
       <button>Delete</button>
     </section>
     `;
+  var localMessage = localStorage.getItem("messages");
+  
+  messageToAppend = messageToAppend + localMessage
   
   container.append(messageToAppend);
   localStorage.setItem("messages", messageToAppend);
