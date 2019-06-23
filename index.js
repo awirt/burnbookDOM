@@ -1,7 +1,9 @@
 var container = $(".appendContainer");
 var submitButton = $(".submitButton");
+var deleteAllButton = $(".deleteAllButton");
 
 submitButton.on("click", appendText);
+deleteAllBUtton.on("click", deleteAllMessages);
 
 function appendText(event) {
   event.preventDefault();
@@ -29,7 +31,12 @@ function appendText(event) {
 function deleteText(event) {
     event.preventDefault();
     event.target.parentNode.remove();
-    }
+}
+
+function deleteAllMessages(event) {
+  event.preventDefault();
+  localStorage.clear();
+}
 
 var allStoredMessages = localStorage.getItem("messages");
 container.html(allStoredMessages);
