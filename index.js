@@ -36,7 +36,7 @@ function deleteText(event) {
 function deleteAllMessages(event) {
   event.preventDefault();
   localStorage.clear();
-  $(".appendContainer").html("");
+  console.log(container);
 }
 
 var allStoredMessages = localStorage.getItem("messages");
